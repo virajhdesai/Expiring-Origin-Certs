@@ -16,7 +16,7 @@ client_secret = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\
 host = akab-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx.luna.akamaiapis.net\
 access_token = akab-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx\
 client_token = akab-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx\
-account_key = 15R-84AB:1-5G3LB
+account_key = 15R-XXXX:X-XXXX
 
 Akamai origin alerts provide configuration names, origin IPs, forward host headers, and SHA-1 fingerprints (LEAF CERT SHA1 HEX).The script maps these alerts back to Property Manager rules and verifies the certificate directly at the origin layer.
 
