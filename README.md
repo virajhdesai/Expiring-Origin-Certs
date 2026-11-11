@@ -3,20 +3,20 @@ Akamai Origin Certificate Expiry Auditor: An automated audit tool that inspects 
 Prerequisites & Dependencies Installed: The script requires Python 3.8+ and three core third-party libraries:\
 pip install edgegrid-python\
 pip install requests\
-pip install cryptography\
+pip install cryptography
 
 edgegrid-python : Akamai EdgeGrid authentication library; parses ~/.edgerc tokens and signs API requests.
 requests: requests handles REST HTTP requests to the Akamai Property Manager API (PAPI).
 cryptography : Parses raw DER-encoded X.509 certificates from TLS sockets to extract validity dates, subjects, and SHA-1 fingerprints.
 
-Akamai Credentials Setup (.edgerc)The script expects API credentials stored in your ~/.edgerc file (typically C:\Users\<username>\.edgerc on Windows or ~/.edgerc on Linux/macOS) with Property Manager (PAPI) Read/Write permissions.The script automatically detects account switch keys under any of the following key names inside the target section:\
+Akamai Credentials Setup (.edgerc)The script expects API credentials stored in your ~/.edgerc file (typically C:\Users\<username>\.edgerc on Windows or ~/.edgerc on Linux/macOS) with Property Manager (PAPI) Read/Write permissions.The script automatically detects account switch keys under any of the following key names inside the target section:
 
 [akamaib]\
 client_secret = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\
 host = akab-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx.luna.akamaiapis.net\
 access_token = akab-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx\
 client_token = akab-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx\
-account_key = 15R-84AB:1-5G3LB\
+account_key = 15R-84AB:1-5G3LB
 
 Akamai origin alerts provide configuration names, origin IPs, forward host headers, and SHA-1 fingerprints (LEAF CERT SHA1 HEX).The script maps these alerts back to Property Manager rules and verifies the certificate directly at the origin layer.
 
