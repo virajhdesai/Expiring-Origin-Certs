@@ -5,8 +5,8 @@ pip install edgegrid-python\
 pip install requests\
 pip install cryptography
 
-edgegrid-python : Akamai EdgeGrid authentication library; parses ~/.edgerc tokens and signs API requests.
-requests: requests handles REST HTTP requests to the Akamai Property Manager API (PAPI).
+edgegrid-python : Akamai EdgeGrid authentication library; parses ~/.edgerc tokens and signs API requests.\
+requests: requests handles REST HTTP requests to the Akamai Property Manager API (PAPI).\
 cryptography : Parses raw DER-encoded X.509 certificates from TLS sockets to extract validity dates, subjects, and SHA-1 fingerprints.
 
 Akamai Credentials Setup (.edgerc)The script expects API credentials stored in your ~/.edgerc file (typically C:\Users\<username>\.edgerc on Windows or ~/.edgerc on Linux/macOS) with Property Manager (PAPI) Read/Write permissions.The script automatically detects account switch keys under any of the following key names inside the target section:
